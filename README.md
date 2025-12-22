@@ -1,4 +1,4 @@
-# 👋 Hi, I'm Colin J. Emmanuel!
+# 👋 Hi, I'm Colin
 
 <div align="left">
   <a href="https://www.linkedin.com/in/colin-j-emmanuel">
