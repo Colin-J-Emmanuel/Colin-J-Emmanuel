@@ -60,84 +60,15 @@ I can apply my skills, collaborate with industry professionals, and contribute t
 
 ## 🚀 Featured Projects
 
-### 🎭 [The Humor Project] — Full-Stack App Suite
+### 🎭 [The Humor Project](https://github.com/Colin-J-Emmanuel/the-humor-project) — Full-Stack App Suite
 *Three interconnected Next.js apps on a shared Supabase backend*
-A suite of three production-deployed web apps forming an end-to-end system for **authoring** AI prompt chains, **generating and rating** image captions, and **administering** the platform. Built over a semester (Spring 2026) for Columbia's COMSW-4995.
+
+A suite of three production-deployed web apps forming an end-to-end system for authoring AI prompt chains, generating and rating image captions, and administering the platform. Built over a semester for Columbia's COMSW-4995.
 
 - **Tech Stack:** Next.js (App Router, TypeScript), Supabase, Tailwind CSS v4, Vercel
 - **The Apps:** [Prompt Chain Tool](https://github.com/Colin-J-Emmanuel/humor-prompt-chain) (authoring) · [Caption Rating App](https://github.com/Colin-J-Emmanuel/hello-world-humor-project) (public voting) · [Admin Panel](https://github.com/Colin-J-Emmanuel/humor-admin-panel) (back-office + analytics)
 - **Key Features:** Google OAuth with role-based access gates, full CRUD over a shared schema, a four-step external caption-generation pipeline, and a vote-analytics dashboard
 - **Learnings:** Building against a shared multi-tenant database, schema-first development, Next.js server actions, and RLS-aware data flows
-This document is the map. Each app has its own repo and its own README; this one explains how the three fit together.
-
-| App | Repo | Role | Audience |
-|-----|------|------|----------|
-| **Prompt Chain Tool** | [`humor-prompt-chain`](https://github.com/Colin-J-Emmanuel/humor-prompt-chain) | Author & test the *humor flavors* (prompt chains) that drive caption generation | Admins (`is_superadmin` or `is_matrix_admin`) |
-| **Caption Rating App** | [`hello-world-humor-project`](https://github.com/Colin-J-Emmanuel/hello-world-humor-project) | Public-facing: browse AI-generated captions, sign in, and upvote/downvote them | Everyone (voting requires sign-in) |
-| **Admin Panel** | [`humor-admin-panel`](https://github.com/Colin-J-Emmanuel/humor-admin-panel) | Back-office CRUD over the domain + vote analytics | Admins (`is_superadmin` only) |
-
----
-
-## How they relate
-
-The three apps don't call each other directly. They're related because they **share two things**: one Supabase database and one external caption-generation API. That shared backbone is what makes them a suite rather than three unrelated projects.
-
-```mermaid
-flowchart TB
-    subgraph Frontends["Three Next.js apps · deployed on Vercel"]
-        PC["humor-prompt-chain<br/><b>Prompt Chain Tool</b><br/><i>authoring</i>"]
-        CR["hello-world-humor-project<br/><b>Caption Rating App</b><br/><i>public</i>"]
-        AP["humor-admin-panel<br/><b>Admin Panel</b><br/><i>back-office</i>"]
-    end
-
-    SB[("Shared Supabase<br/>'Crackd Database – Staging'<br/>auth · flavors · captions · votes")]
-    API["api.almostcrackd.ai<br/>caption pipeline"]
-
-    PC -->|"CRUD humor_flavors / steps"| SB
-    PC -->|"test-flavor pipeline"| API
-    CR -->|"read captions · write votes"| SB
-    CR -->|"upload → generate captions"| API
-    AP -->|"read/write all entities · vote analytics"| SB
-    API -.->|"writes generated captions"| SB
-```
-
-### The data flows in a loop
-
-1. **Author** — In the **Prompt Chain Tool**, an admin defines a *humor flavor*: an ordered chain of LLM steps stored in `humor_flavors` / `humor_flavor_steps`. They can test a flavor end-to-end against the caption pipeline before relying on it.
-2. **Generate** — Those flavors drive caption generation. When an image runs through the pipeline (`api.almostcrackd.ai`), the generated captions land in the shared `captions` table, linked back to the flavor via `humor_flavor_id`.
-3. **Rate** — The public **Caption Rating App** surfaces those captions, ranks them by net votes, and collects up/down votes into `caption_votes`.
-4. **Oversee** — The **Admin Panel** sits across everything: CRUD over the domain entities, plus an Insights view that aggregates the votes the rating app collected.
-
-So the Prompt Chain Tool feeds the captions, the Rating App scores them, and the Admin Panel watches the whole pipeline — all through the one shared database.
-
----
-
-## Shared backbone
-
-- **One Supabase project** — "Crackd Database – Staging," shared across every student in the course. Its schema and RLS policies are **course-owned and not modified by any of these repos**. Every app was built schema-first: exact table/column names confirmed via `information_schema` queries before writing code.
-- **One external API** — `api.almostcrackd.ai`, a four-step caption pipeline (presigned URL → S3 PUT → register image → generate captions), authorized with the signed-in user's Supabase JWT. Used by the Prompt Chain Tool (to test a flavor) and the Caption Rating App (to caption an uploaded image).
-
-## Shared stack
-
-All three apps use the same toolchain:
-
-- **Next.js** (App Router, TypeScript) with auth gating in `proxy.ts` (Next.js 16's `middleware.ts` replacement)
-- **Tailwind CSS v4**
-- **Supabase** via `@supabase/ssr` (separate server + browser clients)
-- **Vercel** for deployment (Deployment Protection off; submissions use commit-specific URLs)
-- Google OAuth via Supabase, with per-app authorization gates
-
----
-
-## Course context
-
-Built across the semester as three project milestones:
-
-- **Project 1** (Assignments 1–5): Caption Rating App
-- **Project 2** (Assignments 6–7): Admin Panel
-- **Project 3** (Assignment 8 + capstone): Prompt Chain Tool
-
-Each repo's own README has the full feature list, local-setup steps, and an Incognito smoke test.
 
 ### 🤖 [Terminal Coding Agent](https://github.com/Colin-J-Emmanuel/terminal-coding-agent)
 *AI-Powered Development Assistant*
