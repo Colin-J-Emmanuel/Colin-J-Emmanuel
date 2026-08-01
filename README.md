@@ -11,12 +11,11 @@
 
 ## 🎓 About Me
 
-I'm a Computer Science student at Columbia University with a passion for leveraging technology to solve real-world problems. As a Machine Learning Fellow at Cornell Tech (through the Break Through Tech AI program), I'm developing both technical expertise and professional skills to make meaningful contributions in the tech industry.
+I'm a Computer Science graduate from Columbia University with a passion for leveraging technology to solve real-world problems. Through the Break Through Tech AI program at Cornell Tech, I trained as a Machine Learning Fellow, building both technical expertise and professional skills to make meaningful contributions in the tech industry.
 
-I'm enthusiastic about building data-driven solutions, creating intelligent systems, and continuously expanding my knowledge. Currently, I'm focused on machine learning foundations, natural language processing, and developing practical AI applications. I'm actively seeking full-time and/or internship opportunities where 
-I can apply my skills, collaborate with industry professionals, and contribute to impactful projects.
+I'm enthusiastic about building data-driven solutions, designing backend systems, and creating intelligent applications. My work spans machine learning and NLP, full-stack web development, and event-driven backend services. I'm actively seeking full-time and/or internship opportunities where I can apply my skills, collaborate with industry professionals, and contribute to impactful projects.
 
-**🎯 Current Focus:** Machine learning engineering, AI-powered tools, software engineering, and data analytics
+**🎯 Current Focus:** Software engineering (backend & distributed systems), machine learning engineering, AI-powered tools, and data analytics
 
 ---
 
@@ -39,6 +38,8 @@ I can apply my skills, collaborate with industry professionals, and contribute t
 ![Matplotlib](https://img.shields.io/badge/Matplotlib-11557c?style=flat&logo=python&logoColor=white)
 
 ### Frameworks & Libraries
+![Spring Boot](https://img.shields.io/badge/Spring_Boot-6DB33F?style=flat&logo=spring-boot&logoColor=white)
+![Apache Kafka](https://img.shields.io/badge/Apache_Kafka-231F20?style=flat&logo=apache-kafka&logoColor=white)
 ![React](https://img.shields.io/badge/React-61DAFB?style=flat&logo=react&logoColor=black)
 ![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat&logo=next.js&logoColor=white)
 ![Flask](https://img.shields.io/badge/Flask-000000?style=flat&logo=flask&logoColor=white)
@@ -60,6 +61,16 @@ I can apply my skills, collaborate with industry professionals, and contribute t
 
 ## 🚀 Featured Projects
 
+### 💳 [Midas Core](https://github.com/Colin-J-Emmanuel/forage-jpmc-advanced-swe) — Event-Driven Transaction Backend
+*Java/Spring Boot backend processing financial transactions through a Kafka pipeline*
+
+The backend of a transaction-processing system built for the J.P. Morgan Chase Advanced Software Engineering program. Transactions flow in from a Kafka topic, are validated against business rules, enriched via an external REST API, persisted to a relational database, and exposed through a REST endpoint.
+
+- **Tech Stack:** Java 17, Spring Boot, Apache Kafka, Spring Data JPA, H2, RestTemplate, Maven
+- **Architecture:** Layered design (Kafka listener → service → persistence) with separation of concerns; external systems isolated behind dedicated conduit components
+- **Key Features:** JSON serialization across Kafka and HTTP boundaries, `@ManyToOne` JPA relationships, business-rule validation, and integration testing against embedded Kafka and in-memory H2
+- **Learnings:** Event-driven architecture, consuming and exposing REST APIs, and convention-over-configuration with Spring Boot
+
 ### 🎭 [The Humor Project](https://github.com/Colin-J-Emmanuel/the-humor-project) — Full-Stack App Suite
 *Three interconnected Next.js apps on a shared Supabase backend*
 
@@ -80,29 +91,6 @@ A sophisticated terminal-based coding agent that interprets natural language ins
 - **Impact:** Streamlines development workflow by enabling conversational programming
 - **Learnings:** API integration, security best practices, prompt engineering
 
-### 📊 [GTA Online Player Behavior Analysis](https://github.com/Colin-J-Emmanuel/gtao-datathon-analysis)
-*Data Science Competition Project - Break Through Tech x Rockstar Games Datathon 2025*
-
-Led data analysis for the Break Through Tech Datathon in partnership with Rockstar Games, exploring player behavior patterns in GTA Online. This project showcases end-to-end data science workflow from exploration to insights.
-
-- **Tech Stack:** Python, Pandas, NumPy, Matplotlib, scikit-learn, Jupyter Notebook
-- **Methodology:** Exploratory data analysis, feature engineering, statistical modeling, data visualization
-- **Results:** Identified key player engagement patterns and provided actionable recommendations for game design
-- **Collaboration:** Worked in a team environment with version control and code reviews
-
-### 🎓 [Machine Learning Foundations Portfolio](https://github.com/Colin-J-Emmanuel/colin-btt-ml-portfolio)
-*Cornell Tech Break Through Tech AI Program*
-
-Comprehensive collection of machine learning projects completed through Cornell Tech's ML Foundations course, demonstrating proficiency in core ML concepts and algorithms.
-
-- **Tech Stack:** Python, scikit-learn, Pandas, NumPy, Jupyter Notebook
-- **Topics Covered:** 
-  - Supervised learning (regression, classification)
-  - Unsupervised learning (clustering, dimensionality reduction)
-  - Model evaluation and validation
-  - Feature engineering and selection
-- **Highlights:** Hands-on implementation of ML algorithms, data preprocessing pipelines, and model optimization
-
 ---
 
 ## 📈 GitHub Activity
@@ -119,20 +107,20 @@ Comprehensive collection of machine learning projects completed through Cornell 
 **📊 Contribution Highlights:**
 - Actively maintaining personal projects with regular commits and updates
 - Contributing to collaborative coursework and team projects
-- Building a portfolio of data science and machine learning applications
+- Building a portfolio spanning backend systems, full-stack apps, and machine learning
 - Consistent learning demonstrated through project evolution and skill development
 
 ---
 
 ## 🎯 What I'm Learning
 
-As a Break Through Tech AI Fellow at Cornell Tech and computer science student at Columbia University, I'm continuously expanding my skill set:
+As a recent Computer Science graduate, I'm continuously expanding my skill set:
 
+- **Backend & Distributed Systems:** Event-driven architecture, message queues, REST API design, and layered service architecture
 - **Advanced Machine Learning:** Deep learning, neural networks, and model optimization techniques
 - **Natural Language Processing:** Text analysis, sentiment classification, and language model applications
 - **Software Engineering Best Practices:** Clean code, testing, documentation, and collaboration workflows
 - **Data Engineering:** ETL pipelines, data warehousing, and scalable data processing
-- **Professional Development:** Technical communication, project management, and industry best practices
 
 ---
 
@@ -142,6 +130,8 @@ As a Break Through Tech AI Fellow at Cornell Tech and computer science student a
   - Intensive machine learning foundations program
   - Industry collaboration and mentorship
   - Real-world project experience with tech companies
+- **Advanced Software Engineering** - J.P. Morgan Chase (Forage)
+  - Built an event-driven transaction-processing backend with Kafka, Spring Boot, and JPA
 
 ---
 
@@ -159,9 +149,9 @@ I believe staying active and engaged outside of tech makes me a better problem-s
 ## 💼 Open to Opportunities
 
 I'm actively seeking full-time roles, and summer 2026 internship opportunities if given the chance, in:
-- **Data Science & Analytics**
+- **Software Engineering (backend & distributed systems)**
 - **Machine Learning Engineering**
-- **Software Engineering (focus on backend/data)**
+- **Data Science & Analytics**
 - **AI/ML Research & Development**
 
 I'm particularly interested in roles where I can apply my technical skills to solve meaningful problems, work with diverse teams, and continue learning from experienced professionals in the industry.
@@ -180,8 +170,4 @@ I'm always excited to discuss technology, data science, collaboration opportunit
 
 <div align="center">
   <i>⚡ Fun Fact: I fell down the ML rabbit hole trying to build a movie recommendation system. Turns out, mimicking Netflix and Spotify is harder than it looks—but that failed first attempt hooked me on machine learning!</i>
-</div>
-
-<div align="center">
-  <sub>Last updated: November 2025</sub>
 </div>
