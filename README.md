@@ -162,7 +162,7 @@ I'm particularly interested in roles where I can apply my technical skills to so
 
 I'm always excited to discuss technology, data science, collaboration opportunities, or just connect with fellow developers and learners!
 
-- **Email:** c.j.emmanuel@columbia.edu | colinjemmanuel@gmail.com
+- **Email:** c.j.emmanuel@columbia.edu
 - **LinkedIn:** [linkedin.com/in/colin-j-emmanuel](https://www.linkedin.com/in/colin-j-emmanuel)
 - **Location:** New York City, NY
 
