@@ -4,18 +4,18 @@
   <a href="https://www.linkedin.com/in/colin-j-emmanuel">
     <img src="https://img.shields.io/badge/LinkedIn-Connect-blue?style=for-the-badge&logo=linkedin" alt="LinkedIn">
   </a>
-  <a href="mailto:c.j.emmanuel@columbia.edu">
-    <img src="https://img.shields.io/badge/Email-Contact-red?style=for-the-badge&logo=gmail" alt="Email">
+  <a href="https://github.com/Colin-J-Emmanuel">
+    <img src="https://img.shields.io/badge/GitHub-Follow-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub">
   </a>
 </div>
 
 ## 🎓 About Me
 
-I'm a Computer Science graduate from Columbia University with a passion for leveraging technology to solve real-world problems. Through the Break Through Tech AI program at Cornell Tech, I trained as a Machine Learning Fellow, building both technical expertise and professional skills to make meaningful contributions in the tech industry.
+I'm a Computer Science graduate from Columbia University who builds backend systems, ML/NLP applications, and full-stack tools. I trained as a Machine Learning Fellow through the Break Through Tech AI program at Cornell Tech.
 
-I'm enthusiastic about building data-driven solutions, designing backend systems, and creating intelligent applications. My work spans machine learning and NLP, full-stack web development, and event-driven backend services. I'm actively seeking full-time and/or internship opportunities where I can apply my skills, collaborate with industry professionals, and contribute to impactful projects.
+I'm most at home designing event-driven backends, shipping full-stack apps against real databases, and wiring LLMs into practical tools. Recent work spans a production-grade multi-agent PR reviewer, a terminal coding agent, and a three-app web suite — details below.
 
-**🎯 Current Focus:** Software engineering (backend & distributed systems), machine learning engineering, AI-powered tools, and data analytics
+**🎯 Focus:** Backend & distributed systems · Machine learning engineering · AI-powered tools · Data analytics
 
 ---
 
@@ -61,35 +61,32 @@ I'm enthusiastic about building data-driven solutions, designing backend systems
 
 ## 🚀 Featured Projects
 
-### 💳 [Midas Core](https://github.com/Colin-J-Emmanuel/forage-jpmc-advanced-swe) — Event-Driven Transaction Backend
-*Java/Spring Boot backend processing financial transactions through a Kafka pipeline*
+### 🤖 [Multi-Agent PR Reviewer](https://github.com/Colin-J-Emmanuel/multi-agent-pr-reviewer) — Event-Driven AI Code Review
+*Parallel LangGraph agents that review GitHub pull requests the way a senior engineer would*
 
-The backend of a transaction-processing system built for the J.P. Morgan Chase Advanced Software Engineering program. Transactions flow in from a Kafka topic, are validated against business rules, enriched via an external REST API, persisted to a relational database, and exposed through a REST endpoint.
+An event-driven system that reviews GitHub pull requests with parallel specialist agents for security, code quality, testing, and documentation. It's a hands-on study of the reliability engineering *around* agents — webhook verification, latency isolation, idempotency, verification gates, and cost control — not just an LLM in a loop.
 
-- **Tech Stack:** Java 17, Spring Boot, Apache Kafka, Spring Data JPA, H2, RestTemplate, Maven
-- **Architecture:** Layered design (Kafka listener → service → persistence) with separation of concerns; external systems isolated behind dedicated conduit components
-- **Key Features:** JSON serialization across Kafka and HTTP boundaries, `@ManyToOne` JPA relationships, business-rule validation, and integration testing against embedded Kafka and in-memory H2
-- **Learnings:** Event-driven architecture, consuming and exposing REST APIs, and convention-over-configuration with Spring Boot
+- **Stack:** Python · FastAPI · Redis · LangGraph · PostgreSQL + pgvector · Docker · LangSmith
+- **Architecture:** HMAC-verified webhook ingestion → async Redis pipeline → four-agent LangGraph with deterministic aggregation → idempotent posting behind a confidence gate
+- **Highlights:** Unified Postgres data layer with pgvector search, bounded retries with failure classification and attempt limits, and full observability — LangSmith tracing, verified cost accounting, and a daily spend ceiling
+
+### 🖥️ [Terminal Coding Agent](https://github.com/Colin-J-Emmanuel/terminal-coding-agent) — AI Development Assistant
+*A ReAct-loop coding agent that reasons, calls tools, and runs code inside a sandbox*
+
+Takes natural-language instructions and acts on your filesystem through a tool system — reading and writing files, searching a codebase, and executing code in a Docker sandbox. Built around the ReAct (Reason–Act–Observe) loop and Anthropic's Claude API, with the load-bearing pieces hand-built for understanding.
+
+- **Stack:** Python · Claude API · Docker · pytest
+- **Architecture:** ReAct agent loop over a tool registry (`write_file`, `read_file`, `search_code`) with context persistence and history summarization at a token threshold
+- **Highlights:** Docker-based execution sandbox with a code validator and pinned timeout bounds, backed by a pytest suite
 
 ### 🎭 [The Humor Project](https://github.com/Colin-J-Emmanuel/the-humor-project) — Full-Stack App Suite
 *Three interconnected Next.js apps on a shared Supabase backend*
 
-A suite of three production-deployed web apps forming an end-to-end system for authoring AI prompt chains, generating and rating image captions, and administering the platform. Built over a semester for Columbia's COMSW-4995.
+A production-deployed system for authoring AI prompt chains, generating and rating image captions, and administering the platform. Built over a semester for Columbia's COMSW-4995.
 
-- **Tech Stack:** Next.js (App Router, TypeScript), Supabase, Tailwind CSS v4, Vercel
-- **The Apps:** [Prompt Chain Tool](https://github.com/Colin-J-Emmanuel/humor-prompt-chain) (authoring) · [Caption Rating App](https://github.com/Colin-J-Emmanuel/hello-world-humor-project) (public voting) · [Admin Panel](https://github.com/Colin-J-Emmanuel/humor-admin-panel) (back-office + analytics)
-- **Key Features:** Google OAuth with role-based access gates, full CRUD over a shared schema, a four-step external caption-generation pipeline, and a vote-analytics dashboard
-- **Learnings:** Building against a shared multi-tenant database, schema-first development, Next.js server actions, and RLS-aware data flows
-
-### 🤖 [Terminal Coding Agent](https://github.com/Colin-J-Emmanuel/terminal-coding-agent)
-*AI-Powered Development Assistant*
-
-A sophisticated terminal-based coding agent that interprets natural language instructions and executes code safely using Claude AI. This project demonstrates practical application of LLM integration and secure code execution.
-
-- **Tech Stack:** Python, Claude AI API, subprocess management
-- **Key Features:** Natural language to code translation, sandboxed execution environment, error handling and debugging assistance
-- **Impact:** Streamlines development workflow by enabling conversational programming
-- **Learnings:** API integration, security best practices, prompt engineering
+- **Stack:** Next.js (App Router, TypeScript) · Supabase · Tailwind CSS v4 · Vercel
+- **The apps:** [Prompt Chain Tool](https://github.com/Colin-J-Emmanuel/humor-prompt-chain) (authoring) · [Caption Rating App](https://github.com/Colin-J-Emmanuel/hello-world-humor-project) (public voting) · [Admin Panel](https://github.com/Colin-J-Emmanuel/humor-admin-panel) (back-office + analytics)
+- **Highlights:** Google OAuth with role-based access gates, a four-step caption-generation pipeline, and a vote-analytics dashboard — all built against a shared, RLS-aware multi-tenant database
 
 ---
 
@@ -104,70 +101,33 @@ A sophisticated terminal-based coding agent that interprets natural language ins
   <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Colin-J-Emmanuel&layout=compact&theme=default&hide_border=true&langs_count=6" alt="Top Languages">
 </div>
 
-**📊 Contribution Highlights:**
-- Actively maintaining personal projects with regular commits and updates
-- Contributing to collaborative coursework and team projects
-- Building a portfolio spanning backend systems, full-stack apps, and machine learning
-- Consistent learning demonstrated through project evolution and skill development
-
 ---
 
-## 🎯 What I'm Learning
+## 💼 Open to Opportunities
 
-As a recent Computer Science graduate, I'm continuously expanding my skill set:
+I'm looking for full-time roles in:
 
-- **Backend & Distributed Systems:** Event-driven architecture, message queues, REST API design, and layered service architecture
-- **Advanced Machine Learning:** Deep learning, neural networks, and model optimization techniques
-- **Natural Language Processing:** Text analysis, sentiment classification, and language model applications
-- **Software Engineering Best Practices:** Clean code, testing, documentation, and collaboration workflows
-- **Data Engineering:** ETL pipelines, data warehousing, and scalable data processing
+- **Software Engineering** — backend & distributed systems
+- **AI/Machine Learning Engineering**
+- **Data Science & Analytics**
 
----
-
-## 🏆 Certifications & Programs
-
-- **Break Through Tech AI Fellow** - Cornell Tech
-  - Intensive machine learning foundations program
-  - Industry collaboration and mentorship
-  - Real-world project experience with tech companies
-- **Advanced Software Engineering** - J.P. Morgan Chase (Forage)
-  - Built an event-driven transaction-processing backend with Kafka, Spring Boot, and JPA
+Currently going deeper on distributed-systems design, LLM infrastructure, and production ML — and always happy to talk shop with fellow builders.
 
 ---
 
 ## ⚽ Beyond the Code
 
-When I'm not coding or analyzing data, you can find me:
-- **On the field:** Playing soccer—taught me the importance of teamwork, strategy, and staying focused under pressure
-- **At the gym:** Maintaining discipline and setting incremental goals, skills that translate directly to tackling complex coding challenges
-- **Exploring stories:** Watching films and series to unwind and appreciate narrative structure and character development
-
-I believe staying active and engaged outside of tech makes me a better problem-solver and collaborator!
+When I'm not building, you'll find me on the soccer field, at the gym chasing incremental goals, or watching films and series for the storytelling. Staying active and engaged outside of tech keeps me a sharper problem-solver and collaborator.
 
 ---
 
-## 💼 Open to Opportunities
+## 📫 Let's Connect
 
-I'm actively seeking full-time roles, and summer 2026 internship opportunities if given the chance, in:
-- **Software Engineering (backend & distributed systems)**
-- **Machine Learning Engineering**
-- **Data Science & Analytics**
-- **AI/ML Research & Development**
-
-I'm particularly interested in roles where I can apply my technical skills to solve meaningful problems, work with diverse teams, and continue learning from experienced professionals in the industry.
-
----
-
-## 📫 Let's Connect!
-
-I'm always excited to discuss technology, data science, collaboration opportunities, or just connect with fellow developers and learners!
-
-- **Email:** c.j.emmanuel@columbia.edu
 - **LinkedIn:** [linkedin.com/in/colin-j-emmanuel](https://www.linkedin.com/in/colin-j-emmanuel)
 - **Location:** New York City, NY
 
 ---
 
 <div align="center">
-  <i>⚡ Fun Fact: I fell down the ML rabbit hole trying to build a movie recommendation system. Turns out, mimicking Netflix and Spotify is harder than it looks—but that failed first attempt hooked me on machine learning!</i>
+  <i>⚡ Fun fact: I fell down the ML rabbit hole trying to build a movie recommendation system. Turns out mimicking Netflix and Spotify is harder than it looks — but that failed first attempt is what hooked me.</i>
 </div>
