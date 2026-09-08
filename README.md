@@ -93,12 +93,11 @@ A production-deployed system for authoring AI prompt chains, generating and rati
 ## 📈 GitHub Activity
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Colin-J-Emmanuel&show_icons=true&theme=default&hide_border=true&count_private=true" alt="GitHub Stats" height="165">
+  <img src="https://github-stats-lovat-ten.vercel.app/api?username=Colin-J-Emmanuel&show_icons=true&hide_rank=true&theme=default&hide_border=true&count_private=true" alt="GitHub Stats" height="165">
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=Colin-J-Emmanuel&theme=default&hide_border=true" alt="GitHub Streak" height="165">
 </div>
-
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Colin-J-Emmanuel&layout=compact&theme=default&hide_border=true&langs_count=6" alt="Top Languages">
+  <img src="https://github-stats-lovat-ten.vercel.app/api/top-langs/?username=Colin-J-Emmanuel&layout=compact&theme=default&hide_border=true&langs_count=6" alt="Top Languages">
 </div>
 
 ---
