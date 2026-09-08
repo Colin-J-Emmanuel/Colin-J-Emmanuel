@@ -124,7 +124,6 @@ When I'm not building, you'll find me on the soccer field, at the gym chasing in
 ## 📫 Let's Connect
 
 - **LinkedIn:** [linkedin.com/in/colin-j-emmanuel](https://www.linkedin.com/in/colin-j-emmanuel)
-- **Location:** New York City, NY
 
 ---
 
