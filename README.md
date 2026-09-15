@@ -11,7 +11,7 @@
 
 ## 🎓 About Me
 
-I'm a Computer Science graduate from Columbia University who builds backend systems, ML/NLP applications, and full-stack tools. I trained as a Machine Learning Fellow through the Break Through Tech AI program at Cornell Tech.
+I'm a Computer Science student from Columbia University who builds backend systems, ML/NLP applications, and full-stack tools. I trained as a Machine Learning Fellow through the Break Through Tech AI program at Cornell Tech.
 
 I'm most at home designing event-driven backends, shipping full-stack apps against real databases, and wiring LLMs into practical tools. Recent work spans a production-grade multi-agent PR reviewer, a terminal coding agent, and a three-app web suite — details below.
 
