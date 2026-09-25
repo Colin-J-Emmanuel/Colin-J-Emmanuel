@@ -11,9 +11,9 @@
 
 ## 🎓 About Me
 
-I'm a Computer Science student from Columbia University who builds backend systems, ML/NLP applications, and full-stack tools. I trained as a Machine Learning Fellow through the Break Through Tech AI program at Cornell Tech.
+I'm a Computer Science student from Columbia University who builds backend systems, AI/ML applications, and full-stack tools. I trained as a Machine Learning Fellow through the Break Through Tech AI program at Cornell Tech.
 
-I'm most at home designing event-driven backends, shipping full-stack apps against real databases, and wiring LLMs into practical tools. Recent work spans a production-grade multi-agent PR reviewer, a terminal coding agent, and a three-app web suite — details below.
+I'm most at home designing event-driven backends, shipping full-stack apps against real databases, and wiring LLMs into practical tools. Recent work sits across software engineering, AI/ML, agentic systems, and generative models — details below.
 
 **🎯 Focus:** Backend & distributed systems · Machine learning engineering · AI-powered tools · Data analytics
 
@@ -74,6 +74,15 @@ I'm most at home designing event-driven backends, shipping full-stack apps again
 ---
 
 ## 🚀 Featured Projects
+
+### 🎨 [Character-Consistent Generation](https://github.com/Colin-J-Emmanuel/character-consistency-lora) — SDXL + LoRA Fine-Tuning
+*Keeping one character looking like itself across any scene — and measuring whether it actually does*
+
+Fine-tunes Stable Diffusion XL with DreamBooth-style LoRA so a single character stays recognizable whether it's in a coffee shop, in space, or in armor. The interesting half is the evaluation: prompt fidelity alone says nothing about identity, so the harness scores both.
+
+- **Stack:** Python · PyTorch · Stable Diffusion XL · Diffusers · LoRA/DreamBooth · CLIP · DINO
+- **Approach:** Low-rank adapters (a few MB) over a frozen UNet, trained against a rare identifier token with optional prior preservation to stop class collapse
+- **Highlights:** Four-metric eval CLI — CLIP-T for prompt fidelity, CLIP-I and DINO for identity fidelity, plus gen-gen self-consistency across scenes — with measured failure modes documented (pose overfitting, identity drift at high guidance, prompt terms the LoRA swallows)
 
 ### 🤖 [Multi-Agent PR Reviewer](https://github.com/Colin-J-Emmanuel/multi-agent-pr-reviewer) — Event-Driven AI Code Review
 *Parallel LangGraph agents that review GitHub pull requests the way a senior engineer would*
@@ -137,9 +146,3 @@ When I'm not building, you'll find me on the soccer field, at the gym chasing in
 ## 📫 Let's Connect
 
 - **LinkedIn:** [linkedin.com/in/colin-j-emmanuel](https://www.linkedin.com/in/colin-j-emmanuel)
-
----
-
-<div align="center">
-  <i>⚡ Fun fact: I fell down the ML rabbit hole trying to build a movie recommendation system. Turns out mimicking Netflix and Spotify is harder than it looks — but that failed first attempt is what hooked me.</i>
-</div>
