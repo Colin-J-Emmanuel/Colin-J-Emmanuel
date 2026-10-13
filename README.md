@@ -23,6 +23,7 @@ I'm most at home designing event-driven backends, shipping full-stack apps again
 
 ### Languages
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
+![Go](https://img.shields.io/badge/Go-00ADD8?style=flat&logo=go&logoColor=white)
 ![Java](https://img.shields.io/badge/Java-ED8B00?style=flat&logo=openjdk&logoColor=white)
 ![C++](https://img.shields.io/badge/C++-00599C?style=flat&logo=cplusplus&logoColor=white)
 ![C](https://img.shields.io/badge/C-A8B9CC?style=flat&logo=c&logoColor=black)
@@ -48,6 +49,7 @@ I'm most at home designing event-driven backends, shipping full-stack apps again
 
 ### Frameworks & Libraries
 ![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat&logo=fastapi&logoColor=white)
+![Gin](https://img.shields.io/badge/Gin-008ECF?style=flat&logo=go&logoColor=white)
 ![Spring Boot](https://img.shields.io/badge/Spring_Boot-6DB33F?style=flat&logo=springboot&logoColor=white)
 ![Apache Kafka](https://img.shields.io/badge/Apache_Kafka-231F20?style=flat&logo=apachekafka&logoColor=white)
 ![React](https://img.shields.io/badge/React-61DAFB?style=flat&logo=react&logoColor=black)
@@ -63,17 +65,29 @@ I'm most at home designing event-driven backends, shipping full-stack apps again
 ![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)
 ![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat&logo=githubactions&logoColor=white)
 ![Vercel](https://img.shields.io/badge/Vercel-000000?style=flat&logo=vercel&logoColor=white)
+![Render](https://img.shields.io/badge/Render-000000?style=flat&logo=render&logoColor=white)
 ![Replit](https://img.shields.io/badge/Replit-F26207?style=flat&logo=replit&logoColor=white)
 ![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=flat&logo=jupyter&logoColor=white)
 
 ### Databases
 ![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=flat&logo=mysql&logoColor=white)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat&logo=postgresql&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=flat&logo=mongodb&logoColor=white)
 ![Supabase](https://img.shields.io/badge/Supabase-3FCF8E?style=flat&logo=supabase&logoColor=white)
 ![Redis](https://img.shields.io/badge/Redis-DC382D?style=flat&logo=redis&logoColor=white)
+
 ---
 
 ## 🚀 Featured Projects
+
+### 🎬 [MagicStream](https://github.com/Colin-J-Emmanuel/magicstream) — AI-Ranked Movie Streaming App · [Live demo](https://magicstream-eight.vercel.app)
+*A full-stack streaming app where an LLM ranks every review and drives what you're recommended*
+
+Browse a catalog, watch trailers, and get recommendations from your favorite genres, best first. An admin writes reviews; an LLM classifies each into one of five rankings, computed once at write time so browsing never waits on a model. Deployed end to end, with every feature tested on both its happy and failure paths.
+
+- **Stack:** Go (Gin) · React + TypeScript · MongoDB Atlas · Groq/Gemini (OpenAI-compatible) · Vercel + Render
+- **Architecture:** React client on Vercel rewriting `/api` to a Go API on Render, so the browser sees one origin: no CORS, first-party cookies
+- **Highlights:** Auth built from scratch (bcrypt, rotating refresh tokens with reuse detection, HttpOnly cookies, role-based access), an LLM client that validates model output and retries with backoff, and a recommendation query backed by a compound index verified with `explain()`
 
 ### 🎨 [Character-Consistent Generation](https://github.com/Colin-J-Emmanuel/character-consistency-lora) — SDXL + LoRA Fine-Tuning
 *Keeping one character looking like itself across any scene — and measuring whether it actually does*
